@@ -1,0 +1,104 @@
+table {
+    height: 600px;
+    width: 60%;
+    float: left;
+}
+.ARC {
+    background-color: lightblue;
+    text-align: center;
+}
+.Stages {
+    background-color: lightcoral;
+    text-align: center;
+}
+.ILC {
+    background-color: lightgreen;
+    text-align: center;
+}
+.Clark {
+    background-color: lightyellow;
+    text-align: center;
+}
+.space {
+    background-color: grey;
+    border: solid 1px black;
+    width: 10%;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.piece {
+    height: 35px;
+    padding: 0;
+    margin: 0;
+}
+.title{
+    background-color: yellow;
+    text-align: center;
+}
+.rotate {
+    text-align: center;
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+}
+
+h5.door-top {
+    vertical-align: text-top;
+    margin-top: 0px;
+}
+h5.door-bottom {
+    vertical-align: text-bottom;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+h6 {
+    display: inline-block;
+    margin: 0;
+}
+.image {
+    display: inline-block;
+    margin: 0;
+}
+
+.card-holder {
+    width: 30%;
+    border: solid 1px black;
+    height: 600px;
+    float: right;
+    margin-right: 0px;
+    padding-right: 0px;
+    background-color: beige;
+}
+.card-anal {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: solid 1px black;
+}
+.card-type{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: solid 1px black;
+}
+.card-name {
+    width: 20%;
+    border: solid 1px black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+input {
+    width: 80%;
+}
+
+.card-row {
+    height: (100/15);
+}
+#submit {
+    text-align: center;
+}

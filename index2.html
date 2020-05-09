@@ -1,0 +1,318 @@
+<html>
+<header><title>Qlue</title>
+    <link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="mystyle.css")}}'/>
+</header>
+<body>
+    <table id="board">
+        <tbody>
+            <tr>
+                <td class="ARC" colspan="3" rowspan="3">
+                    <h2>ARC</h2>
+                    {% for i in loc: %}
+                        {% if loc[i] == 'ARC': %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% for i in loc: %}
+                            {% if loc[i] == [k+3,0]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+
+                <td class="Stages" colspan="3" rowspan="3"><h2>Stages</h2>
+                {% for i in loc: %}
+                        {% if loc[i] == 'Stages': %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+            </tr>
+            <tr>
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% if k==0 or k==3: %}
+                            <h6 class="rotate">Door</h6>
+                        {% endif %}
+                        {% for i in loc: %}
+                            {% if loc[i] == [k+3,1]: %}
+                            <div class="image"><img class="piece" src='{{ url_for("static", filename=imgs[i])}}'></div>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+
+            </tr>
+            <tr>
+                {% for k in range(4): %}
+                    <td class="space">
+                            {% if loc[i] == [k+3,2]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+            
+            <tr>
+                {% for k in range(10): %}
+                <td class="space">
+                    {% if k==1 or k==8: %}
+                        <h6 class="door-top">Door</h6>
+                    {% endif %}
+                        {% for i in loc: %}
+                            {% if loc[i] == [k,4]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% for i in loc: %}
+                            {% if loc[i] == [k,4]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+                <td colspan="2" rowspan="2" class="title"><h1>QLUE</h1></td>
+
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% for i in loc: %}
+                            {% if loc[i] == [k+5,4]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+            <tr>
+
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% for i in loc: %}
+                            {% if loc[i] == [k,5]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+                
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% for i in loc: %}
+                            {% if loc[i] == [k+6,5]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                
+                {% for k in range(10): %}
+                    <td class="space">
+                        {% if k==1 or k==8:%}
+                        <h6 class="door-bottom">Door</h6>
+                    {% endif %}
+                        {% for i in loc: %}
+                            {% if loc[i] == [k,6]: %}
+                            <div class="image"><img class="piece" src='{{ url_for("static", filename=imgs[i])}}'></div>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+
+                {% endfor %}
+            </tr>
+            <tr>
+                <td class="ILC" colspan="3" rowspan="3"><h2>ILC</h2></td>
+                {% for i in loc: %}
+                        {% if loc[i] == 'ILC': %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                        {% endif %}
+                    {% endfor %}
+                
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% for i in loc: %}
+                            {% if loc[i] == [k+3,7]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+                <td class="Clark" colspan="3" rowspan="3"><h2>Clark</h2>
+                {% for i in loc: %}
+                        {% if loc[i] == 'Clark': %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+            </tr>
+            <tr>
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% if k==0 or k==3: %}
+                        <h6 class="rotate">Door</h6>
+                    {% endif %}
+                        {% for i in loc: %}
+                            {% if loc[i] == [k+3,8]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for k in range(4): %}
+                    <td class="space">
+                        {% for i in loc: %}
+                            {% if loc[i] == [k+3,9]: %}
+                            <img class="piece" src='{{ url_for("static", filename=imgs[i])}}'>
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+
+        </tbody>
+    </table>
+<div>
+    <table class="card-holder">
+        <tr class="card-row">
+            <td class="card-type" colspan="2"><h4>People</h4></td>
+        </tr>
+        <form name="data1" action="post.html" method="post"></form>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Aphra</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data1"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Diedrichs</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data2"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Tommy Dean</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data3"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Mombo</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data4"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-type" colspan="2"><h4>Weapons</h4></td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Calculator</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data5"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Textbook</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data6"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Glass Bottle</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data7"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Pen</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data8"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-type" colspan="2"><h4>Locations</h4></td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Arc</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data9"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Stages</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data10"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>ILC</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data11"></input>
+
+            </td>
+        </tr>
+        <tr class="card-row">
+            <td class="card-name">
+                <h6>Clark</h6>
+            </td>
+            <td class="card-anal">
+                <input type="text" name="data12"></input>
+
+            </td>
+        </tr>
+        <tr>
+            <td id="submit" colspan="2">
+                <input type="submit" value="drop that shit"></input>
+            </form>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
